@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer, nav, aside, section, div  {
+    display: block;
+}
+
+#wrapper{
+    margin: 0 auto;
+    width: 1440px;
+}
+
+header{
+    position: relative;
+    width: 1440px;
+    height: 123px;
+    background-color: #F2E9E9;
+    text-align: center;
+}
+
+#ball{
+    position:absolute;
+    width: 14px;
+    height: 14px;
+    top: 34px;
+    left: 595px;
+    border-radius: 100px;
+    background-color: #F72828;
+}
+
+nav a{
+    position: relative;
+    text-decoration: none;
+    font-family: 'Amiko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+    top: 52px;
+    margin-left: 18px;
+}
+
+#MIX{
+
+}
+
+main{
+    position: relative;
+    width: 881px;
+    height: 624px;
+    margin-left: 244px;
+    margin-top: 91px;
+}
+
+main section{
+    background-color: #EBEF18;
+    Width:75px;
+    Height:23px;
+}
+
+#boxes{
+    position: absolute;
+    width: 437px;
+    height: 624px;
+    left: 444px;
+}
+
+#box1{
+    position: absolute;
+    top: 44px;
+    width: 75px;
+    height: 23px;
+}
+
+#box2{
+    position: absolute;
+    top: 75px;
+    width: 136px;
+    height: 46px;
+}
+
+#box3{
+    position: absolute;
+    top: 132px;
+    width: 134px;
+    height: 404px;
+}
+
+#box4{
+    position: absolute;
+    top: 547px;
+    width: 88px;
+    height: 28px;
+}
+
+#box5{
+    position: absolute;
+    top: 582px;
+    width: 25px;
+    height: 26px;
+}
+
+#box6{
+    position: absolute;
+    top: 582px;
+    width: 25px;
+    height: 26px;
+    left: 32px;
+}
+
+#box7{
+    position: absolute;
+    top: 44px;
+    width: 246px;
+    height: 352px;
+    left: 149px;
+}
+
+#box8{
+    position: absolute;
+    top: 412px;
+    width: 123px;
+    height: 212px;
+    left: 149px;
+}
+
+#box9{
+    position: absolute;
+    top: 412px;
+    width: 55px;
+    height: 105px;
+    left: 286px;
+}
+
+#box10{
+    position: absolute;
+    top: 524px;
+    width: 110px;
+    height: 58px;
+    left: 286px;
+}
+
+#box11{
+    position: absolute;
+    width: 28px;
+    height: 55px;
+    left: 409px;
+}
+
+#box12{
+    position: absolute;
+    top: 66px;
+    width: 28px;
+    height: 55px;
+    left: 409px;
+}
+
+#box13{
+    position: absolute;
+    top: 132px;
+    width: 28px;
+    height: 55px;
+    left: 409px;
+}
+
+#box14{
+    position: absolute;
+    top: 198px;
+    width: 28px;
+    height: 198px;
+    left: 409px;
+}
+
+
+#box15{
+    position: absolute;
+    top: 412px;
+    width: 55px;
+    height: 105px;
+    left: 382px;
+}
+
+#wix-text{
+    position: relative;
+    width: 374px;
+    height: 120px;
+    top: 176px;
+}
+
+#wix-text h1{
+    position: absolute;
+    width: 234px;
+    height: 97px;
+    font-family: 'Amiko';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 96px;
+    color: #000000;
+}
+
+#wix-text h4{
+    position: absolute;
+    font-family: 'Amiko';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    top: 87px;
+    color: #000000;
+}
+
+footer{
+    position: relative;
+    width: 1440px;
+    height: 41px;
+    top: 145px;
+    background: #000000;
+}
