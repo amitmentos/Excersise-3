@@ -9,10 +9,20 @@ header, main, footer, nav, aside, section, div  {
     display: block;
 }
 
-#wrapper{
+.wrapper{
     margin: 0 auto;
     width: 1440px;
+    position: relative;
 }
+
+#wrapper1{
+    height: 1024px;
+}
+
+#wrapper2{
+    height: 1860px;
+}
+
 
 header{
     position: relative;
@@ -22,15 +32,25 @@ header{
     text-align: center;
 }
 
-#ball{
+.ball{
     position:absolute;
     width: 14px;
     height: 14px;
-    top: 34px;
-    left: 595px;
+
     border-radius: 100px;
     background-color: #F72828;
 }
+
+#ball-page1{
+    top: 34px;
+    left: 595px;
+}
+
+#ball-page2{
+    left: 686px;
+    top: 34px;
+}
+
 
 nav a{
     position: relative;
@@ -45,16 +65,19 @@ nav a{
     margin-left: 18px;
 }
 
-#MIX{
 
-}
-
-main{
+#main1{
     position: relative;
     width: 881px;
     height: 624px;
     margin-left: 244px;
     margin-top: 91px;
+}
+
+#main2{
+    position: relative;
+    width: 969px;
+    height: 1741px;
 }
 
 main section{
@@ -63,7 +86,7 @@ main section{
     Height:23px;
 }
 
-#boxes{
+.boxes{
     position: absolute;
     width: 437px;
     height: 624px;
@@ -185,14 +208,14 @@ main section{
     left: 382px;
 }
 
-#wix-text{
+.wix-text{
     position: relative;
     width: 374px;
     height: 120px;
     top: 176px;
 }
 
-#wix-text h1{
+.wix-text h1{
     position: absolute;
     width: 234px;
     height: 97px;
@@ -204,7 +227,7 @@ main section{
     color: #000000;
 }
 
-#wix-text h4{
+.wix-text h4{
     position: absolute;
     font-family: 'Amiko';
     font-style: normal;
@@ -219,6 +242,128 @@ footer{
     position: relative;
     width: 1440px;
     height: 41px;
-    top: 145px;
     background: #000000;
+    bottom: 0px;
+    margin-bottom: 0;
+}
+
+#footer-page1{
+    top: 145px;
+}
+
+#footer-page2{
+    position: absolute;
+    top: 1983px;
+    bottom: 0px;
+}
+
+/* -----------------------------------------------*/
+/*                   PAGE 2                       */
+/* -----------------------------------------------*/
+
+.windows{
+    display: flex;
+}
+
+.windows section{
+    position: relative;
+    width: 457px;
+    height: 299px;
+    background-color: #C4C4C4;
+    margin-bottom: 70px;
+    margin-right: 55px;
+}
+
+#windows-left{
+    margin-top: 119px;
+    margin-left: 151px;
+    height: 1741px;
+}
+
+#windows-right{
+    position: absolute;
+    margin-top: 287px;
+    margin-left: 663px;
+    height: 1573px;
+    overflow: hidden;
+}
+
+.right-rec{
+    position: absolute;
+    width: 169px;
+    height: 1900px;
+    left: 1271px;
+    top: 0px;
+    background: #EBEF18;
+}
+
+
+.right-rec section, #topR-rec{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #000000;
+}
+
+
+#rec1{
+    left: 0px;
+    top: 119px;
+}
+
+#rec2{
+    top: 247px;
+    left: 89px;
+    background-color: #ffffff;
+}
+
+#rec3{
+    top: 616px;
+    left: 0px;
+}
+
+.myName{
+    display: block;
+    position: absolute;
+    width: 81px;
+    height: 600px;
+    top: 1240px;
+    left: 44px;
+    text-align: center;
+}
+
+
+.myName a{
+    font-family: 'Amiko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 128px;
+    align-items: flex-end;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* -----------------------------------------------*/
+/*                   PAGE 3                       */
+/* -----------------------------------------------*/
+
+#topR-rec{
+    left: 1336px;
+    top: 21px;
+}
+
+.left-grey-rec{
+    position: absolute;
+    width: 372px;
+    height: 995px;
+    background: #E5E5E5;
+    text-align: center;
+}
+
+.left-grey-rec nav{
+    position: absolute;
+    top: 123px;
+    height: 33px;
+    width: 350px;
 }
