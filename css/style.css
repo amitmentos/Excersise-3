@@ -1,3 +1,6 @@
+/* -----------------------------------------------*/
+/*                   GLOBAL                       */
+/* -----------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Amiko&display=swap');
 
 * {
@@ -15,14 +18,6 @@ header, main, footer, nav, aside, section, div  {
     position: relative;
 }
 
-#wrapper1{
-    height: 1024px;
-}
-
-#wrapper2{
-    height: 1860px;
-}
-
 
 header{
     position: relative;
@@ -36,21 +31,9 @@ header{
     position:absolute;
     width: 14px;
     height: 14px;
-
     border-radius: 100px;
     background-color: #F72828;
 }
-
-#ball-page1{
-    top: 34px;
-    left: 595px;
-}
-
-#ball-page2{
-    left: 686px;
-    top: 34px;
-}
-
 
 nav a{
     position: relative;
@@ -61,10 +44,25 @@ nav a{
     font-size: 24px;
     line-height: 32px;
     color: #000000;
-    top: 52px;
     margin-left: 18px;
 }
 
+
+
+
+/* -----------------------------------------------*/
+/*                   PAGE 1                       */
+/* -----------------------------------------------*/
+
+#wrapper1{
+    height: 1024px;
+}
+
+
+#ball-page1{
+    top: 34px;
+    left: 595px;
+}
 
 #main1{
     position: relative;
@@ -74,13 +72,11 @@ nav a{
     margin-top: 91px;
 }
 
-#main2{
-    position: relative;
-    width: 969px;
-    height: 1741px;
+.navP1-2 a{
+    top: 52px;
 }
 
-main section{
+.boxes section{
     background-color: #EBEF18;
     Width:75px;
     Height:23px;
@@ -251,15 +247,26 @@ footer{
     top: 145px;
 }
 
-#footer-page2{
-    position: absolute;
-    top: 1983px;
-    bottom: 0px;
-}
 
 /* -----------------------------------------------*/
 /*                   PAGE 2                       */
 /* -----------------------------------------------*/
+#wrapper2{
+    height: 1860px;
+}
+
+
+#ball-page2{
+    left: 686px;
+    top: 34px;
+}
+
+
+#main2{
+    position: relative;
+    width: 969px;
+    height: 1741px;
+}
 
 .windows{
     display: flex;
@@ -330,6 +337,7 @@ footer{
     top: 1240px;
     left: 44px;
     text-align: center;
+
 }
 
 
@@ -341,29 +349,118 @@ footer{
     line-height: 128px;
     align-items: flex-end;
     text-decoration: none;
+    transform: translateX(-50%);
     color: #000000;
 }
+
+#footer-page2{
+    position: absolute;
+    top: 1983px;
+    bottom: 0px;
+}
+
 
 /* -----------------------------------------------*/
 /*                   PAGE 3                       */
 /* -----------------------------------------------*/
 
+
 #topR-rec{
-    left: 1336px;
     top: 21px;
 }
 
-.left-grey-rec{
-    position: absolute;
-    width: 372px;
-    height: 995px;
-    background: #E5E5E5;
-    text-align: center;
+
+@media screen and (min-width:850px){
+
+    #wrapper3{
+        height: 1624;
+    }
+
+    #main3{
+        position: relative;
+        width: 1440px;
+    }
+
+    #ball-page3{
+        left: 301px;
+        top: 105px;
+    }
+
+    #topR-rec{
+        left: 1336px;
+    }
+
+    .left-grey-rec{
+        position: absolute;
+        width: 372px;
+        height: 995px;
+        background: #E5E5E5;
+        text-align: center;
+    }
+    
+    .navP3{
+        position: absolute;
+        top: 123px;
+        height: 33px;
+        width: 350px;
+    }
+    
+    .right-blue-rec{
+        position: absolute;
+        width: 104px;
+        height: 995px;
+        left: 1336px;
+        background: rgba(24, 71, 239, 0.3);
+    }
+    
+    .bottom-yellow-rec{
+        position: absolute;
+        width: 1440px;
+        height: 463px;
+        left: 0px;
+        top: 995px;
+        background: #EBEF18;
+    }
+    
+
+    #footer-page3{
+        position: absolute;
+        top: 1582px;
+    }
+        
 }
 
-.left-grey-rec nav{
-    position: absolute;
-    top: 123px;
-    height: 33px;
-    width: 350px;
+@media screen and (max-width:849px){
+
+    #wrapper3{
+        width: 850px;
+    }
+
+    #main3{
+        position: relative;
+        width: 850px;
+    }
+
+    header{
+        width: 850px;
+    }
+
+    #topR-rec{
+        left: 744px;
+    }
+
+    .left-grey-rec{
+        position: absolute;
+        width: 850px;
+        height: 105px;
+        background: #E5E5E5;
+        text-align: center;
+    }
+
+    #footer-page3{
+        position: absolute;
+        top: 1582px;
+    }
+      
 }
+
