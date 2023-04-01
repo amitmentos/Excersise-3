@@ -46,7 +46,9 @@ nav a{
     margin-left: 18px;
 }
 
-
+nav a:hover{
+    color: navy;
+}
 
 
 /* -----------------------------------------------*/
@@ -354,10 +356,15 @@ footer{
     color: #000000;
 }
 
+.myName a:hover{
+    color: navy;
+}
+
+
 #footer-page2{
-    position: absolute;
-    top: 1983px;
-    bottom: 0px;
+    position: fixed;
+    height: 41px;
+    bottom: 0;
 }
 
 
@@ -427,9 +434,8 @@ footer{
     
 
     #footer-page3{
-        position: absolute;
-        top: 1583px;
-        height: 43px;
+        position: fixed;
+        height: 41px;
     }
         
 }
@@ -447,7 +453,7 @@ footer{
         height: 1451px;
     }
 
-    header{
+    #headerP3{
         width: 850px;
     }
 
@@ -488,9 +494,8 @@ footer{
 
 
     #footer-page3{
-        position: absolute;
+        position: fixed;
         width: 850px;
-        top: 1983px;
     }
       
 }
