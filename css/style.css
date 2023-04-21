@@ -377,7 +377,23 @@ footer{
     top: 21px;
 }
 
+#game-recs{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 372px;
+    width: 964px;
+    height: 995px;
+}
 
+#game-recs section{
+    top: 123px;
+    background-color: #000000;
+}
+
+#game-recs section:first-child{
+    left: 64px;
+}
 @media screen and (min-width:851px){
 
     #wrapper3{
