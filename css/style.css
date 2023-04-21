@@ -377,23 +377,55 @@ footer{
     top: 21px;
 }
 
-#game-recs{
+#main3 #game-recs{
     display: flex;
     flex-wrap: wrap;
+    /* flex-direction: column;  */
     position: relative;
-    left: 372px;
-    width: 964px;
-    height: 995px;
+    left: 426px;
+    width: 900px;
+    height: 875px;
+    top: 123px;
+    
 }
 
 #game-recs section{
-    top: 123px;
     background-color: #000000;
+    top: 0px;
+    margin-left: 132px;
+    margin-bottom: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-family: 'Amiko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
 }
 
-#game-recs section:first-child{
-    left: 64px;
+#game-recs section.active {
+    color: white;
 }
+  
+#game-recs section p{
+    color: #ffffff;
+    font-family: 'Amiko';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+}
+
+
+#game-recs section:first-child,#game-recs section:nth-child(10){
+    margin-left: 0px;
+}
+
+#game-recs section:nth-child(9){
+    margin-right: 100px;
+} 
+
 @media screen and (min-width:851px){
 
     #wrapper3{
@@ -467,6 +499,11 @@ footer{
         position: relative;
         width: 850px;
         height: 1451px;
+    }
+
+    #main3 #game-recs{
+        left: 48px;
+        width: 820px;
     }
 
     #headerP3{
