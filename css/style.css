@@ -392,7 +392,7 @@ footer{
 #game-recs section{
     background-color: #000000;
     top: 0px;
-    margin-left: 132px;
+    margin-right: 132px;
     margin-bottom: 170px;
     display: flex;
     flex-wrap: wrap;
@@ -422,8 +422,8 @@ footer{
     margin-left: 0px;
 }
 
-#game-recs section:nth-child(9){
-    margin-right: 100px;
+#game-recs section:nth-child(4),#game-recs section:nth-child(7){
+    margin-right: 0px;
 } 
 
 @media screen and (min-width:851px){
@@ -506,6 +506,10 @@ footer{
         width: 820px;
     }
 
+    #game-recs section:nth-child(4),#game-recs section:nth-child(7){
+        margin-right: 132px;
+    } 
+
     #headerP3{
         width: 850px;
     }
@@ -517,8 +521,8 @@ footer{
 
     .left-grey-rec{
         position: relative;
-        width: 850px;
-        height: 105px;
+        width: 850px !important;
+        height: 105px !important;
         background: #E5E5E5;
         text-align: center;
     }
@@ -543,6 +547,9 @@ footer{
         left: 0px;
         top: 1451px;
         background: #EBEF18;
+    }
+    .right-blue-rec{
+        display: none;
     }
 
 
