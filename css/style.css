@@ -49,7 +49,40 @@ nav a{
 nav a:hover{
     color: navy;
 }
+#topR-rec:hover{
+    background-color: navy;
+}
+#topR-restart:hover{
+    background-color: navy;
+}
 
+.error-message {
+    background-color: #ffcccc;
+    color: #ff0000;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    position: fixed;
+    left: 720px;
+    z-index: 9999;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+    font-family: 'Amiko';
+}
+
+.error-message-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    }
+
+.close-btn {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 /* -----------------------------------------------*/
 /*                   PAGE 1                       */
@@ -308,7 +341,7 @@ footer{
 }
 
 
-.right-rec section, #topR-rec{
+.right-rec section, #topR-rec, #topR-restart{
     position: absolute;
     width: 80px;
     height: 80px;
@@ -366,17 +399,22 @@ footer{
     height: 41px;
     bottom: 0;
 }
-
-
 /* -----------------------------------------------*/
 /*                   PAGE 3                       */
 /* -----------------------------------------------*/
-
-
-#topR-rec{
+#topR-rec, #topR-restart{
     top: 21px;
 }
 
+#topR-restart, #topR-rec{
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Amiko';
+    font-style: normal;
+    font-weight: 400;
+}
 #main3 #game-recs{
     display: flex;
     flex-wrap: wrap;
@@ -384,14 +422,12 @@ footer{
     position: relative;
     left: 426px;
     width: 900px;
-    height: 875px;
+    /* height: 875px; */
     top: 123px;
-    
 }
 
 #game-recs section{
     background-color: #000000;
-    top: 0px;
     margin-right: 132px;
     margin-bottom: 170px;
     display: flex;
@@ -416,7 +452,6 @@ footer{
     font-weight: 400;
     font-size: 64px;
 }
-
 
 #game-recs section:first-child,#game-recs section:nth-child(10){
     margin-left: 0px;
@@ -448,10 +483,15 @@ footer{
         left: 1336px;
     }
 
+    #topR-restart{
+        left: 1236px;
+    }
+
     .left-grey-rec{
         position: absolute;
         width: 372px;
-        height: 995px;
+        /* height: 995px; */
+        height: 100%;
         background: #E5E5E5;
         text-align: center;
     }
@@ -466,9 +506,10 @@ footer{
     .right-blue-rec{
         position: absolute;
         width: 104px;
-        height: 995px;
+        /* height: 995px; */
+        height: 100%;
         left: 1336px;
-        background: rgba(24, 71, 239, 0.3);
+        background: rgba(24, 71, 239, 0.3)!important;
     }
     
     .bottom-yellow-rec{
@@ -476,7 +517,8 @@ footer{
         width: 1440px;
         height: 465px;
         left: 0px;
-        top: 995px;
+        /* top: 995px; */
+        bottom: 0px;
         background: #EBEF18;
     }
     
@@ -518,6 +560,9 @@ footer{
         left: 744px;
     }
 
+    #topR-restart{
+        left: 644px;
+    }
 
     .left-grey-rec{
         position: relative;
