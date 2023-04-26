@@ -11,9 +11,10 @@ $(document).ready(function() {
 
     $('#topR-rec').click(function(){       
         for (let index = 0; index < 3; index++) {
-                var recNum=$("#game-recs section").length; 
+                var recNum=$("#game-recs section").length;
+                var newRec = '<section id="game-rec' + recNum + '"></section>';
+
                 if(recNum<100){
-                    var newRec = '<section id="game-rec' + recNum + '"></section>';
                     $("#game-recs").append(newRec);   
 
                     var newStyle = '#game-recs #game-rec' + recNum + ' { ' +
@@ -51,15 +52,15 @@ $(document).ready(function() {
 
         var pairsNum = Math.floor(recNum / 2); // number of pairs of letters
         var lettersArr = []; // array to store the letter
-        var randomLetter = charArr[Math.floor(Math.random() * charArr.length)];
         // choose random letters and add them to the array
         for (var i = 0; i < pairsNum; i++) {
-            
+            var randomLetter = charArr[Math.floor(Math.random() * charArr.length)];
             lettersArr.push(randomLetter);
             lettersArr.push(randomLetter);
         }    
         // if there is an odd number of squares, add one random letter to the array
         if (recNum % 2 !== 0) {
+            var randomLetter = charArr[Math.floor(Math.random() * charArr.length)];
             lettersArr.push(randomLetter);
         }
         // shuffle the letters array
