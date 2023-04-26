@@ -274,12 +274,12 @@ footer{
     width: 1440px;
     height: 41px;
     background: #000000;
-    bottom: 0px;
     margin-bottom: 0;
 }
 
 #footer-page1{
-    position: fixed;
+    position: absolute;
+    top: 983px;
 }
 
 
@@ -434,17 +434,28 @@ footer{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    color: #000000;
+}
+
+#game-recs section div{
+    color: white;
     font-family: 'Amiko';
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
+    display: none;
 }
 
 #game-recs section.active {
     color: white;
 }
-  
+
+#game-recs section:hover{
+    background-color:navy;
+    color: navy;
+    transition: background-color 0.2s ease;
+    /* transition: color 0.1s ease; */
+}
+
 #game-recs section p{
     color: #ffffff;
     font-family: 'Amiko';
@@ -524,7 +535,7 @@ footer{
     
 
     #footer-page3{
-        position: fixed;
+        position: relative;
         height: 41px;
     }
         
@@ -599,7 +610,8 @@ footer{
 
 
     #footer-page3{
-        position: fixed;
+        position: relative;
+        top: 409px !important;
         width: 850px;
     }
       

@@ -28,11 +28,14 @@ $(document).ready(function() {
                     if(recNum>7 && $(window).width() > 849){
                         $(".bottom-yellow-rec").css('top', lastSectionBottom+300);
                         $("#main3").css('height',lastSectionBottom+300);
+                        $("#footer-page3").css('top',465);
                         console.log(lastSection.outerHeight());
                     }
 
                     if(recNum>6&& $(window).width()<=849){
-                        $(".bottom-yellow-rec").css('top', parseFloat($(".bottom-yellow-rec").css('top'))+200);
+                        $(".bottom-yellow-rec").css('top', lastSectionBottom+300);
+                        $("#main3").css('height',lastSectionBottom+300);
+                        $("#footer-page3").css('top',409 );
                     }
 
                     if(recNum>0){
@@ -48,49 +51,51 @@ $(document).ready(function() {
 
         var pairsNum = Math.floor(recNum / 2); // number of pairs of letters
         var lettersArr = []; // array to store the letter
-            // choose random letters and add them to the array
-            for (var i = 0; i < pairsNum; i++) {
-                var randomLetter = charArr[Math.floor(Math.random() * charArr.length)];
-                lettersArr.push(randomLetter);
-                lettersArr.push(randomLetter);
-            }    
-            // if there is an odd number of squares, add one random letter to the array
-            if (recNum % 2 !== 0) {
-                var randomLetter = charArr[Math.floor(Math.random() * charArr.length)];
-                lettersArr.push(randomLetter);
-            }
-            // shuffle the letters array
-            for (var i = lettersArr.length - 1; i > 0; i--) {
-                var j = Math.floor(Math.random() * (i + 1));
-                var temp = lettersArr[i];
-                lettersArr[i] = lettersArr[j];
-                lettersArr[j] = temp;
-            }
-            //add letters to the recs
-            for(var i = 0; i<recNum;i++){
-                $('#game-rec'+i).text(lettersArr[i]);
-            }  
+        var randomLetter = charArr[Math.floor(Math.random() * charArr.length)];
+        // choose random letters and add them to the array
+        for (var i = 0; i < pairsNum; i++) {
+            
+            lettersArr.push(randomLetter);
+            lettersArr.push(randomLetter);
+        }    
+        // if there is an odd number of squares, add one random letter to the array
+        if (recNum % 2 !== 0) {
+            lettersArr.push(randomLetter);
+        }
+        // shuffle the letters array
+        for (var i = lettersArr.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = lettersArr[i];
+            lettersArr[i] = lettersArr[j];
+            lettersArr[j] = temp;
+        }
+        //add letters to the recs
+        for(var i = 0; i<recNum;i++){
+            // $('#game-rec'+i).text(lettersArr[i]);
+            $('#game-rec'+i).html('<div>'+lettersArr[i]+'</div>');
+        }  
     });
 
 
     $('#game-recs').on('click', 'section', function() {
+        
         var recNum=$("#game-recs section").length; 
+        var clickedSection = $('#game-rec'+$(this).index()+' div');
         if(recNum%2!==0){
             $('.error-message').show();
         }
         else{
-            var clickedSection = $('#game-rec'+$(this).index());
-            clickedSection.css('color', 'white');
+            clickedSection.css('display', 'block');
             flag+=1;
             if(flag==1){
                 clickedLetters.push(clickedSection.text());
-                clickedRecs.push(clickedSection.index());
+                clickedRecs.push(clickedSection.parent().index());
             }
             if(flag==2){
                 if(clickedSection.text()!=clickedLetters[0]){    
                     setTimeout(() => {
-                        clickedSection.css('color', 'black');
-                        $('#game-rec' + clickedRecs[0] ).css('color', 'black');
+                        clickedSection.css('display', 'none');
+                        $('#game-rec' + clickedRecs[0] +' div').css('display', 'none');
                         clickedLetters.splice(0);
                         clickedRecs.splice(0);
                         flag=0;
@@ -117,12 +122,15 @@ $(document).ready(function() {
 
             $(".bottom-yellow-rec").css('top', lastSectionBottom+300);
             $("#main3").css('height',lastSectionBottom+300);
+            $("#footer-page3").css('top',465 );
             flag1 = 0;
             flag2 = 1;
         }
 
         if(prevScreenWidth > 850 && screenWidth <= 850&& recNum >6 && flag2) {
             $(".bottom-yellow-rec").css('top', lastSectionBottom+300);
+            $("#main3").css('height',lastSectionBottom+300);
+            $("#footer-page3").css('top',409);
             flag1 = 1;
             flag2 = 0;
         }
