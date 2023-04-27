@@ -60,7 +60,7 @@ nav a:hover{
     padding: 10px;
     border: 1px solid #ff0000;
     border-radius: 5px;
-    position: fixed;
+    position: absolute;
     left: 720px;
     z-index: 9999;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -481,10 +481,14 @@ footer{
         left: 1236px;
     }
 
+    .error-message{
+        left: 720px;
+        top: 20px;
+    }
+
     .left-grey-rec{
         position: absolute;
         width: 372px;
-        /* height: 995px; */
         height: 100%;
         background: #E5E5E5;
         text-align: center;
@@ -522,7 +526,10 @@ footer{
     }     
 }
 @media screen and (max-width:850px){
-
+    .error-message{
+        left: 270px;
+        top: 120px;
+    }
     #wrapper3{
         width: 850px;
         height: 2024px;

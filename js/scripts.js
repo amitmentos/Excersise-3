@@ -1,47 +1,42 @@
 $(document).ready(function() {
     var startRecSize= 80, myCss = document.styleSheets[0], sectionCount = 0, flag=0, flag1=1, flag2=1, clickedLetters=[], clickedRecs=[];
     var charArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-
+    //game script
     $('#topR-rec').click(function(){ 
         var pairsNum, recNum, newRec, newStyle, lastSection, lastSectionBottom, prevTop, newTop, pairsNum, lettersArr, randomLetter, randRec, temp;
         for (let index = 0; index < 3; index++) {
                 recNum=$("#game-recs section").length;
                 newRec = '<section id="game-rec' + recNum + '"></section>';
+                $("#game-recs").append(newRec);   
 
-                if(recNum<100){
-                    $("#game-recs").append(newRec);   
+                newStyle = '#game-recs #game-rec' + recNum + ' { ' +
+                'width: ' + (startRecSize + 20 * recNum) + 'px; ' +
+                'height: ' + (startRecSize + 20 * recNum) + 'px; ' +
+                '}';
+                myCss.insertRule(newStyle, myCss.cssRules.length);
+                lastSection = $('#game-recs section:last');
+                lastSectionBottom = lastSection.position().top + lastSection.outerHeight();
 
-                    newStyle = '#game-recs #game-rec' + recNum + ' { ' +
-                    'width: ' + (startRecSize + 20 * recNum) + 'px; ' +
-                    'height: ' + (startRecSize + 20 * recNum) + 'px; ' +
-                    '}';
-                    myCss.insertRule(newStyle, myCss.cssRules.length);
-
-                    lastSection = $('#game-recs section:last');
-                    lastSectionBottom = lastSection.position().top + lastSection.outerHeight();
-
-                    if(recNum>7 && $(window).width() > 849){
-                        $(".bottom-yellow-rec").css('top', lastSectionBottom+300);
-                        $("#main3").css('height',lastSectionBottom+300);
-                        $("#footer-page3").css('top',465);
-                        console.log(lastSection.outerHeight());
-                    }
-
-                    if(recNum>6&& $(window).width()<=849){
-                        $(".bottom-yellow-rec").css('top', lastSectionBottom+300);
-                        $("#main3").css('height',lastSectionBottom+300);
-                        $("#footer-page3").css('top',409 );
-                    }
-
-                    if(recNum>0){
-                        prevTop = $('#game-rec' + (recNum - 1)).position().top;
-                        newTop = $('#game-rec' + recNum).position().top;
-                        if (newTop > prevTop || (recNum>9 && recNum-1%3==0)) {
-                            $('#game-rec' + recNum).css('margin-left',0);
-                        }
+                if(recNum>7 && $(window).width() > 849){
+                    $(".bottom-yellow-rec").css('top', lastSectionBottom+300);
+                    $("#main3").css('height',lastSectionBottom+300);
+                    $("#footer-page3").css('top',465);
+                    console.log(lastSection.outerHeight());
+                }
+                if(recNum>6&& $(window).width()<=849){
+                    $(".bottom-yellow-rec").css('top', lastSectionBottom+300);
+                    $("#main3").css('height',lastSectionBottom+300);
+                    $("#footer-page3").css('top',409 );
+                }
+                if(recNum>0){
+                    prevTop = $('#game-rec' + (recNum - 1)).position().top;
+                    newTop = $('#game-rec' + recNum).position().top;
+                    if (newTop > prevTop || (recNum>9 && recNum-1%3==0)) {
+                        $('#game-rec' + recNum).css('margin-left',0);
                     }
                 }
                 recNum=$("#game-recs section").length; 
+                $('.error-message').hide();
         }
 
         pairsNum = Math.floor(recNum / 2);
@@ -102,10 +97,11 @@ $(document).ready(function() {
             }
         }
     });
-
+    
+    //resize the screen scrip
+    var prevScreenWidth = $(window).width();
 
     $(window).on('resize', function() {
-        var prevScreenWidth = $(window).width();
         var screenWidth = $(window).width();
         var recNum=$("#game-recs section").length; 
         if(recNum>1){
@@ -113,7 +109,7 @@ $(document).ready(function() {
             var lastSectionBottom = lastSection.position().top + lastSection.outerHeight();
         }
         if(prevScreenWidth < 850 && screenWidth >= 850 && recNum > 6 &&flag1) {
-
+            lastSectionBottom = lastSection.position().top + lastSection.outerHeight();
             $(".bottom-yellow-rec").css('top', lastSectionBottom+300);
             $("#main3").css('height',lastSectionBottom+300);
             $("#footer-page3").css('top',465 );
@@ -122,6 +118,7 @@ $(document).ready(function() {
         }
 
         if(prevScreenWidth > 850 && screenWidth <= 850&& recNum >6 && flag2) {
+            lastSectionBottom = lastSection.position().top + lastSection.outerHeight();
             $(".bottom-yellow-rec").css('top', lastSectionBottom+300);
             $("#main3").css('height',lastSectionBottom+300);
             $("#footer-page3").css('top',409);
@@ -132,10 +129,12 @@ $(document).ready(function() {
         prevScreenWidth = screenWidth;
     });
 
+    //close error btn
     $('.close-btn').on('click', function(){
         $('.error-message').hide();
     });
 
+    
     $('#topR-restart').on('click', function(){
         location.reload();
     });
