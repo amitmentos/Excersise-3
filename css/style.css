@@ -1,4 +1,3 @@
-/* -----------------------------------------------*/
 /*                   GLOBAL                       */
 /* -----------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Amiko&display=swap');
@@ -16,7 +15,6 @@ header, main, footer, nav, aside, section, div  {
     margin: 0 auto;
     position: relative;
 }
-
 
 header{
     position: relative;
@@ -84,7 +82,6 @@ nav a:hover{
     cursor: pointer;
 }
 
-/* -----------------------------------------------*/
 /*                   PAGE 1                       */
 /* -----------------------------------------------*/
 
@@ -96,7 +93,7 @@ nav a:hover{
 
 #ball-page1{
     top: 34px;
-    left: 595px;
+    left: 600px;
 }
 
 #main1{
@@ -230,7 +227,6 @@ nav a:hover{
     left: 409px;
 }
 
-
 #box15{
     position: absolute;
     top: 412px;
@@ -282,8 +278,6 @@ footer{
     top: 983px;
 }
 
-
-/* -----------------------------------------------*/
 /*                   PAGE 2                       */
 /* -----------------------------------------------*/
 #wrapper2{
@@ -291,12 +285,10 @@ footer{
     height: 2024px;
 }
 
-
 #ball-page2{
-    left: 686px;
+    left: 694px;
     top: 34px;
 }
-
 
 #main2{
     position: relative;
@@ -340,14 +332,12 @@ footer{
     background: #EBEF18;
 }
 
-
 .right-rec section, #topR-rec, #topR-restart{
     position: absolute;
     width: 80px;
     height: 80px;
     background-color: #000000;
 }
-
 
 #rec1{
     left: 0px;
@@ -376,7 +366,6 @@ footer{
 
 }
 
-
 .myName a{
     font-family: 'Amiko';
     font-style: normal;
@@ -393,13 +382,11 @@ footer{
     color: navy;
 }
 
-
 #footer-page2{
     position: fixed;
     height: 41px;
     bottom: 0;
 }
-/* -----------------------------------------------*/
 /*                   PAGE 3                       */
 /* -----------------------------------------------*/
 #topR-rec, #topR-restart{
@@ -418,11 +405,9 @@ footer{
 #main3 #game-recs{
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column;  */
     position: relative;
     left: 426px;
     width: 900px;
-    /* height: 875px; */
     top: 123px;
 }
 
@@ -453,7 +438,6 @@ footer{
     background-color:navy;
     color: navy;
     transition: background-color 0.2s ease;
-    /* transition: color 0.1s ease; */
 }
 
 #game-recs section p{
@@ -473,7 +457,6 @@ footer{
 } 
 
 @media screen and (min-width:851px){
-
     #wrapper3{
         width: 1440px;
         height: 1624px;
@@ -486,7 +469,7 @@ footer{
     }
 
     #ball-page3{
-        left: 301px;
+        left: 305px;
         top: 105px;
     }
 
@@ -533,14 +516,11 @@ footer{
         background: #EBEF18;
     }
     
-
     #footer-page3{
         position: relative;
         height: 41px;
-    }
-        
+    }     
 }
-
 @media screen and (max-width:850px){
 
     #wrapper3{
@@ -604,10 +584,10 @@ footer{
         top: 1451px;
         background: #EBEF18;
     }
+
     .right-blue-rec{
         display: none;
     }
-
 
     #footer-page3{
         position: relative;
